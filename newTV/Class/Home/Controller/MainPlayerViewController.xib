@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainPlayerViewController" customModule="newTV" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="WNM-fL-0g1" id="C4m-PT-OG7"/>
+                <outlet property="closeGift" destination="nyO-tr-fWz" id="OKd-h4-dnU"/>
+                <outlet property="fullScreenBtn" destination="FcK-4n-2rr" id="21S-wa-2Wa"/>
+                <outlet property="iconBtnClick" destination="tAr-dT-470" id="Gd4-nH-UF8"/>
+                <outlet property="myToolBar" destination="BVT-4I-q51" id="35Q-p6-TQ9"/>
+                <outlet property="pauseBtn" destination="KFJ-J9-cPy" id="a6X-gz-dv2"/>
+                <outlet property="shareBtn" destination="Lod-r2-3K9" id="seR-z0-t9S"/>
+                <outlet property="textFiled" destination="2Ve-cN-WWH" id="dEQ-T9-2u4"/>
+                <outlet property="toolBarBottom" destination="tlc-bA-Sjt" id="aLV-1L-QVO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT6-zO-Mhj" userLabel="witch">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNM-fL-0g1" userLabel="back">
+                            <rect key="frame" x="0.0" y="20" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="2YQ-hV-XbA"/>
+                                <constraint firstAttribute="height" constant="35" id="qVO-M5-lcw"/>
+                            </constraints>
+                            <state key="normal" image="btn_round_back_32x32_"/>
+                            <state key="highlighted" image="btn_round_back_h_32x32_"/>
+                            <connections>
+                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="t7G-fI-5M3"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OcZ-Lw-SvN">
+                            <rect key="frame" x="564" y="20" width="36" height="300"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lod-r2-3K9" userLabel="share">
+                                    <rect key="frame" x="0.0" y="0.0" width="36" height="75"/>
+                                    <state key="normal" image="btn_v_more_34x34_"/>
+                                    <state key="highlighted" image="btn_v_more_h_34x34_"/>
+                                    <connections>
+                                        <action selector="shareBtnClick:" destination="-1" eventType="touchUpInside" id="y1d-jW-6nU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyO-tr-fWz" userLabel="closegift">
+                                    <rect key="frame" x="0.0" y="75" width="36" height="75"/>
+                                    <state key="normal" image="btn_close_gift_select_36x36_"/>
+                                    <state key="highlighted" image="btn_close_gift_selectHighlight-1_36x36_"/>
+                                    <connections>
+                                        <action selector="closeGiftClick:" destination="-1" eventType="touchUpInside" id="8eg-5S-mt0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFJ-J9-cPy" userLabel="pause">
+                                    <rect key="frame" x="0.0" y="150" width="36" height="75"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="fEE-A4-bB8"/>
+                                    </constraints>
+                                    <state key="normal" image="btn_v_pause_36x36_"/>
+                                    <state key="highlighted" image="btn_v_pause_h_36x36_"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="fEE-A4-bB8"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="pauseBtnClick:" destination="-1" eventType="touchUpInside" id="Lpo-jc-Juu"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcK-4n-2rr" userLabel="fullScreen">
+                                    <rect key="frame" x="0.0" y="225" width="36" height="75"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="35" id="Wnh-zW-Os7"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="z1T-Dz-Zdn"/>
+                                    </constraints>
+                                    <state key="normal" image="btn_vdo_full_36x36_"/>
+                                    <state key="highlighted" image="btn_vdo_full_click_36x36_"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Wnh-zW-Os7"/>
+                                            <exclude reference="z1T-Dz-Zdn"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="fullScreenClick:" destination="-1" eventType="touchUpInside" id="frm-NC-O1C"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="KFJ-J9-cPy" firstAttribute="height" secondItem="Lod-r2-3K9" secondAttribute="height" id="0qL-yY-N32"/>
+                                <constraint firstItem="FcK-4n-2rr" firstAttribute="height" secondItem="Lod-r2-3K9" secondAttribute="height" id="FfT-Nb-0bm"/>
+                                <constraint firstItem="nyO-tr-fWz" firstAttribute="height" secondItem="Lod-r2-3K9" secondAttribute="height" id="Hkd-Cv-4rq"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="OcZ-Lw-SvN" secondAttribute="bottom" id="6z1-2N-6Fz"/>
+                        <constraint firstItem="WNM-fL-0g1" firstAttribute="top" secondItem="BT6-zO-Mhj" secondAttribute="top" constant="20" id="7oB-rG-8bS"/>
+                        <constraint firstItem="WNM-fL-0g1" firstAttribute="leading" secondItem="BT6-zO-Mhj" secondAttribute="leading" id="8Mt-vL-Fy6"/>
+                        <constraint firstItem="OcZ-Lw-SvN" firstAttribute="top" secondItem="BT6-zO-Mhj" secondAttribute="top" constant="20" id="MHJ-rJ-FGo"/>
+                        <constraint firstAttribute="trailing" secondItem="OcZ-Lw-SvN" secondAttribute="trailing" id="e6E-rC-ZqV"/>
+                        <constraint firstAttribute="width" secondItem="BT6-zO-Mhj" secondAttribute="height" multiplier="15:8" id="q70-fb-osW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lq-Xn-Xof">
+                    <rect key="frame" x="0.0" y="320" width="600" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRt-Yv-V9F">
+                            <rect key="frame" x="540" y="0.0" width="60" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="qBc-cT-gX6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="关注"/>
+                            <state key="selected" title="已关注">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-JO-2ZY">
+                            <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="聊天">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeu-OK-MdJ">
+                            <rect key="frame" x="180" y="0.0" width="180" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="主播">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-8t-bET">
+                            <rect key="frame" x="360" y="0.0" width="180" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="贡献榜">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="jeu-OK-MdJ" firstAttribute="width" secondItem="Zi0-JO-2ZY" secondAttribute="width" id="0D9-wX-vGu"/>
+                        <constraint firstItem="gfJ-8t-bET" firstAttribute="leading" secondItem="jeu-OK-MdJ" secondAttribute="trailing" id="88d-Wd-zfO"/>
+                        <constraint firstItem="JRt-Yv-V9F" firstAttribute="top" secondItem="5Lq-Xn-Xof" secondAttribute="top" id="9Jj-D1-9Ww"/>
+                        <constraint firstItem="jeu-OK-MdJ" firstAttribute="leading" secondItem="Zi0-JO-2ZY" secondAttribute="trailing" id="IYQ-j0-sw4"/>
+                        <constraint firstAttribute="bottom" secondItem="jeu-OK-MdJ" secondAttribute="bottom" id="KAK-9h-Ub8"/>
+                        <constraint firstAttribute="bottom" secondItem="gfJ-8t-bET" secondAttribute="bottom" id="KAN-F9-seW"/>
+                        <constraint firstItem="gfJ-8t-bET" firstAttribute="top" secondItem="5Lq-Xn-Xof" secondAttribute="top" id="Sgl-cU-Gqg"/>
+                        <constraint firstItem="Zi0-JO-2ZY" firstAttribute="leading" secondItem="5Lq-Xn-Xof" secondAttribute="leading" id="TnS-wr-I2C"/>
+                        <constraint firstItem="JRt-Yv-V9F" firstAttribute="leading" secondItem="Zi0-JO-2ZY" secondAttribute="trailing" multiplier="3" id="XS4-ZZ-WEQ"/>
+                        <constraint firstAttribute="height" constant="40" id="YJr-aS-X4k"/>
+                        <constraint firstAttribute="trailing" secondItem="JRt-Yv-V9F" secondAttribute="trailing" id="bOy-4D-A0a"/>
+                        <constraint firstItem="JRt-Yv-V9F" firstAttribute="leading" secondItem="gfJ-8t-bET" secondAttribute="trailing" id="i0m-NP-rdr"/>
+                        <constraint firstAttribute="bottom" secondItem="Zi0-JO-2ZY" secondAttribute="bottom" id="pbo-dy-VJu"/>
+                        <constraint firstItem="jeu-OK-MdJ" firstAttribute="top" secondItem="5Lq-Xn-Xof" secondAttribute="top" id="qPt-r6-Abg"/>
+                        <constraint firstItem="Zi0-JO-2ZY" firstAttribute="top" secondItem="5Lq-Xn-Xof" secondAttribute="top" id="skK-qI-Tro"/>
+                        <constraint firstAttribute="bottom" secondItem="JRt-Yv-V9F" secondAttribute="bottom" id="tMN-UZ-6iD"/>
+                    </constraints>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVT-4I-q51">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="tkQ-nj-LAq"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" id="DEK-2q-RGg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tAr-dT-470">
+                                <rect key="frame" x="20" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="dyla_btn_vdo_face_24x24_"/>
+                                <state key="highlighted" image="dyla_btn_vdo_face_click_24x24_"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="B1G-Ss-OQj">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="2Ve-cN-WWH">
+                                <rect key="frame" x="54" y="7" width="395" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lQ6-9b-pM3"/>
+                        <barButtonItem style="plain" id="oeU-lc-T6a">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ql7-73-M8L">
+                                <rect key="frame" x="506" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_v_buy_32x32_"/>
+                                <connections>
+                                    <action selector="buyBtnClick:" destination="-1" eventType="touchUpInside" id="Civ-Hh-X3c"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="Idg-qL-ea6">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UqR-AR-W6W">
+                                <rect key="frame" x="548" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_v_gift_32x32_"/>
+                                <connections>
+                                    <action selector="giftBtnClick:" destination="-1" eventType="touchUpInside" id="rnL-rs-9Yp"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5Lq-Xn-Xof" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4c3-eY-csN"/>
+                <constraint firstItem="BT6-zO-Mhj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9kf-V7-25F"/>
+                <constraint firstAttribute="trailing" secondItem="BT6-zO-Mhj" secondAttribute="trailing" id="K2e-QG-3ge"/>
+                <constraint firstItem="BVT-4I-q51" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QyZ-JI-6zu"/>
+                <constraint firstItem="5Lq-Xn-Xof" firstAttribute="top" secondItem="BT6-zO-Mhj" secondAttribute="bottom" id="XF9-7e-66G"/>
+                <constraint firstAttribute="trailing" secondItem="BVT-4I-q51" secondAttribute="trailing" id="eKa-nP-z9H"/>
+                <constraint firstItem="BT6-zO-Mhj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qWZ-Yn-KO8"/>
+                <constraint firstAttribute="trailing" secondItem="5Lq-Xn-Xof" secondAttribute="trailing" id="rAs-vE-mi7"/>
+                <constraint firstAttribute="bottom" secondItem="BVT-4I-q51" secondAttribute="bottom" id="tlc-bA-Sjt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="312" y="438"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_close_gift_selectHighlight-1_36x36_" width="36" height="36"/>
+        <image name="btn_close_gift_select_36x36_" width="36" height="36"/>
+        <image name="btn_round_back_32x32_" width="32" height="32"/>
+        <image name="btn_round_back_h_32x32_" width="32" height="32"/>
+        <image name="btn_v_buy_32x32_" width="32" height="32"/>
+        <image name="btn_v_gift_32x32_" width="32" height="32"/>
+        <image name="btn_v_more_34x34_" width="34" height="34"/>
+        <image name="btn_v_more_h_34x34_" width="34" height="34"/>
+        <image name="btn_v_pause_36x36_" width="36" height="36"/>
+        <image name="btn_v_pause_h_36x36_" width="36" height="36"/>
+        <image name="btn_vdo_full_36x36_" width="36" height="36"/>
+        <image name="btn_vdo_full_click_36x36_" width="36" height="36"/>
+        <image name="dyla_btn_vdo_face_24x24_" width="24" height="24"/>
+        <image name="dyla_btn_vdo_face_click_24x24_" width="24" height="24"/>
+    </resources>
+</document>
